@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding-top: 70px;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.main-jellybean {
+    margin-bottom: 20px;
+}
+
+canvas {
+    display: block; 
+}
+
+.form-group {
+    display: flex;
+    align-items: center; 
+    gap: 10px; 
+    margin: 20px 0; 
+}
+
+input[type="color"],
+input[type="text"],
+button {
+    padding: 10px;
+    font-size: 1em; 
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin: 0; 
+}
+
+button {
+    cursor: pointer;
+    background-color: #f9f5f4;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ec3033;
+    color: white;
+}
+
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.card {
+    border: 2px solid #ccc; 
+    background-color: #f9f9f9; 
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    border-radius: 8px;
+    transition: all 0.3s ease; 
+}
+
+.card:hover {
+    border-color: #ec3033; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05); 
+}
+
+.card h3 {
+font-size: 1.2em;
+margin-bottom: 10px;
+color: #ec3033; 
+}
+
+.color-box {
+    width: 50px;
+    height: 50px;
+    margin: 10px auto;
+    border-radius: 50%; 
+}
+
+.jellybean-img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover; 
+    margin-top: 10px;
+    transition: transform 0.3s ease; 
+}
+
+.card:hover .jellybean-img {
+    transform: scale(1.1);
+}
