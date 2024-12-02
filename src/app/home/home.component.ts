@@ -1,26 +1,39 @@
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FooterComponent } from '../footer/footer.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [], 
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss'] 
+  imports: [CommonModule, FooterComponent],
+  templateUrl: './home.component.html', 
+  styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
-  beansList: any[] = [];
+  beans: { name: string; imgSrc: string; description: string }[] = [];
 
   constructor(private http: HttpClient) {
-    this.getAllBeans(); 
+    this.getAllBeans();
   }
 
   getAllBeans() {
-    this.http.get("https://jellybellywikiapi.onrender.com/api/Beans").subscribe((result: any) => {
-      console.log("Data:", result);
-      this.beansList = result;
-    }, (error) => {
-      console.error("Error fetching data:", error); 
-    });
+    this.http.get("https://jellybellywikiapi.onrender.com/api/Beans").subscribe(
+      (result: any) => {
+        const beansData = result.items;
+        if (Array.isArray(beansData)) {
+          this.beans = beansData.map((bean: any) => ({
+            name: bean.flavorName,
+            imgSrc: bean.imageUrl,
+            description: bean.description || "No description available", 
+          }));
+        } else {
+          console.error("No se encontraron beans en la propiedad 'items'.");
+        }
+      },
+      (error) => {
+        console.error("Error al obtener datos de la API:", error);
+      }
+    );
   }
 }
