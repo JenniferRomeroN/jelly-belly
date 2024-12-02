@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="main-jellybean">
+        <canvas #canvas width="500" height="500"></canvas>
+    </div>
+    <div class="form-group">
+        <input type="color" [(ngModel)]="selectedColor" (input)="changeColor($event)">
+        <input type="text" [(ngModel)]="userName" placeholder="Enter your name">
+        <button (click)="generateCard()">Generate Jelly Bean</button>
+    </div>
+    <div class="cards">
+        <div *ngFor="let jellyBean of jellyBeanData" class="card">
+            <h3>{{ jellyBean.name }}</h3>
+            <img [src]="jellyBean.image" alt="Jelly Bean Image" class="jellybean-img"/>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>
