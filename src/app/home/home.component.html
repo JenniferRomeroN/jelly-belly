@@ -1,7 +1,58 @@
-<div class="row">
-    <div class="col-2">
-        <button class="btn btn-sccess" (click)="getAllBeans()">Get jelly belly</button>
-    </div>
+<div class="body">
+  <section class="header"></section>
 
-   
+
+  <div class="title"><h2>JELLY BELLY FLAVORS</h2></div>
+  
+  <div class="bean-gallery-container">
+    <div class="bean-gallery">
+    
+      <div class="bean" *ngFor="let bean of beans">
+        <h3>{{ bean.name }}</h3>
+        <img [src]="bean.imgSrc" [alt]="bean.name">
+        <div class="tooltip">{{ bean.description }}</div>
+      </div>
+    </div>
+  </div>
+
+  <section class="b1">
+  </section>
+  
+  <div class="title"><h2>EXPLORE MORE...</h2></div>
+
+  <div class="image-circle-container">
+    <div class="image-circle">
+      <img src="imgs/h1.png" alt="Imagen 1">
+      <h3>History</h3>
+    </div>
+    <div class="image-circle">
+      <img src="imgs/r1.jpg" alt="Imagen 2">
+      <h3>Recipes</h3>
+    </div>
+    <div class="image-circle">
+      <img src="imgs/c3.jpg" alt="Imagen 3">
+      <h3>Combinations</h3>
+    </div>
+  </div>
+
+  <section class="b2"></section>
+  
+  
+  <div class="title"><h2>CONTACT US</h2></div>
+
+  <div class="contact-form">
+    <form>
+      <label for="name">Your Name:</label>
+      <input type="text" id="name" name="name">
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email">
+      <label for="message">What's on your mind?</label>
+      <textarea id="message" name="message"></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
 </div>
+
+<app-footer></app-footer>
+
+  
