@@ -3,6 +3,6 @@ import { HomeComponent } from './home/home.component';
 import { CustomComponent } from './custom/custom.component';
 
 export const routes: Routes = [
-  { path: '', component: HomeComponent }, // Ruta para Home
+  { path: 'home', component: HomeComponent }, // Ruta para Home
   { path: 'custom', component: CustomComponent }, // Ruta para Custom
 ];
