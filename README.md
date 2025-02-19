@@ -2,26 +2,63 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.9.
 
-## Development server
+# Descripción
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Este proyecto es una página web interactiva para personalizar caramelos Jelly Belly. Los usuarios pueden elegir sabores, colores según sus preferencias. También se muestra una lista de sabores disponibles para explorar.
 
-## Code scaffolding
+# Características
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+* Selección de sabores de Jelly Belly.
 
-## Build
+* Listado de sabores disponibles.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+* Personalización de colores.
 
-## Running unit tests
+* Opciones de empaque personalizadas.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+* Vista previa en tiempo real.
 
-## Running end-to-end tests
+* Interfaz de usuario atractiva y fácil de usar.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+# Tecnologías Utilizadas
 
-## Further help
+* Framework: Angular
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+* Frontend: HTML, CSS, TypeScript
+
+
+
+Instalación y Uso
+
+1. Clonar el repositorio
+
+ `git clone https://github.com/JenniferRomeroN/jelly-belly.git`
+
+2. Instalar dependencias
+
+ `npm install` 
+
+3. Ejecutar el proyecto en local
+
+ `ng serve` 
+
+# Deploy
+
+La aplicación está desplegada en Vercel
+
+# Contribución
+
+* Haz un fork del repositorio
+
+* Crea una rama (git checkout -b feature/nueva-caracteristica)
+
+* Realiza tus cambios y haz commit (git commit -m 'Agregada nueva característica')
+
+* Realiza un push a la rama (git push origin feature/nueva-caracteristica)
+
+* Abre un Pull Request
+
+# Autores
+
+Jennifer Romero - Desarrolladora Frontend
+Nia German - Desarrolladora Frontend
