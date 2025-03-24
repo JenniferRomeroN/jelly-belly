@@ -7,9 +7,9 @@ import { routes } from './app.routes';
 
 export const appConfig: ApplicationConfig = {
   providers: [
+    provideRouter(routes),
     provideHttpClient(),
     provideZoneChangeDetection({ eventCoalescing: true }),
-    provideRouter(routes), // Asegúrate de que esté bien importado
     provideClientHydration(),
   ]
 };
